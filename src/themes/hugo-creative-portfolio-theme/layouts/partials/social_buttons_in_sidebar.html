@@ -1,0 +1,33 @@
+<p class="social">
+
+  {{ with .Site.Params.social.email }}
+  <a href="mailto:{{ . }}" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  {{end}}
+
+  {{ with .Site.Params.social.github }}
+  <a href="{{ . }}" data-animate-hover="pulse" class="external">
+    <i class="fa fa-github"></i>
+  </a>
+  {{end}}
+
+  {{ with .Site.Params.social.medium }}
+  <a href="{{ . }}" data-animate-hover="pulse" class="external">
+    <i class="fa fa-medium"></i>
+  </a>
+  {{end}}
+
+  {{ with .Site.Params.social.linkedin }}
+  <a href="{{ . }}" data-animate-hover="pulse" class="external">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  {{end}}
+
+  {{ with .Site.Params.social.twitter }}
+  <a href="{{ . }}" data-animate-hover="pulse" class="external twitter">
+    <i class="fa fa-twitter"></i>
+  </a>
+  {{end}}
+
+</p>

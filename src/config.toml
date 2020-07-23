@@ -1,0 +1,44 @@
+baseurl = "https://sdhnshu.github.io/"
+title = "Sudhanshu Passi"
+theme = "hugo-creative-portfolio-theme"
+languageCode = "en-us"
+disqusShortname = "sudhanshupassi"
+googleAnalytics = "UA-173272544-1"
+canonifyURLs = true
+pluralizelisttitles = false
+
+[params]
+  # Style options: default (pink), blue, green, pink, red, sea, violet
+  # Use custom.css for your custom styling
+  style = "violet"
+  description = "Sudhanshu Passi's personal website"
+  copyright = "&copy; 2020 Sudhanshu Passi"
+  sidebarAbout = [
+
+  ]
+
+  # Nav links in the side bar
+  [[params.navlinks]]
+  name = "Showcase"
+  url = "showcase/"
+  home = true
+
+  [[params.navlinks]]
+  name = "Experiments"
+  url = "experiments/"
+
+  [[params.navlinks]]
+  name = "Inspirations"
+  url = "inspirations/"
+
+  [[params.navlinks]]
+  name = "About"
+  url = "about/"
+
+  [params.social]
+  email         = "sudhanshupassi@gmail.com"
+  twitter       = "https://twitter.com/Sudhanshupassi"
+  linkedin      = "https://www.linkedin.com/in/sdhnshu/"
+  medium        = "https://medium.com/@sdhnshu"
+  github        = "https://github.com/sdhnshu"
+  behance       = "https://www.behance.net/sdhnshu"
