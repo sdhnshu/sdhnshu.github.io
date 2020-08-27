@@ -1,6 +1,6 @@
 +++
 date = "2020-07-24"
-title = "Title"
+title = "Dev tools"
 showonlyimage = false
 draft = true
 image = "https://news.artnet.com/app/news-upload/2018/04/gioconda_mona-lisa-677x1024.jpg"
@@ -14,3 +14,19 @@ This is the awesome description of the post.
 ![img](/img/posts/image.jpg)
 
 ### Welcome
+
+Code profiling
+Load Testing
+Automatic deployment
+Cron running
+Airflow Pipeline DAGs
+
+Both for data sci and API dev
+
+Database management
+
+Queues
+
+https://github.com/Delgan/loguru
+https://github.com/keleshev/schema
+https://github.com/tiangolo/fastapi

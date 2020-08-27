@@ -1,6 +1,6 @@
 +++
 date = "2020-07-24"
-title = "Title"
+title = "Game theory"
 showonlyimage = false
 draft = true
 image = "https://news.artnet.com/app/news-upload/2018/04/gioconda_mona-lisa-677x1024.jpg"
@@ -14,3 +14,4 @@ This is the awesome description of the post.
 ![img](/img/posts/image.jpg)
 
 ### Welcome
+https://ncase.me/trust/

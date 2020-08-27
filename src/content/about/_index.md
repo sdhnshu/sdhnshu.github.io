@@ -13,7 +13,7 @@ I built this site using [Hugo](https://gohugo.io/) and modified its [creative po
 
 ![about](/img/about.png)
 
-Hi! I’m Sudhanshu. I have 2.5+ years of experience building software interfaces and analytics pipelines. I love visual arts and am most expressive with computer-generated art. Considered a graphic design career but had better skills with computers.
+Hi! I’m Sudhanshu. I build software interfaces and analytics pipelines. I love visual arts and am most expressive with computer-generated art. Considered a graphic design career but had better skills with computers.
 
 I love working with startups and small-mid size companies. With my experience, I helped [Locale.ai](https://www.locale.ai/) bootstrap their geo-spatial data analytics platform. At [CoWrks](https://www.cowrks.com/), I helped power core revenue streams by building software services. Their clients still use the social network I helped build to connect. In my latest project, I give artists control over an AI to generate new realistic images. It uses the [StyleGAN2](https://arxiv.org/abs/1912.04958) neural network under the hood.
 
