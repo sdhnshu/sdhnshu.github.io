@@ -28,10 +28,6 @@ pluralizelisttitles = false
   url = "experiments/"
 
   [[params.navlinks]]
-  name = "Inspirations"
-  url = "inspirations/"
-
-  [[params.navlinks]]
   name = "About"
   url = "about/"
 

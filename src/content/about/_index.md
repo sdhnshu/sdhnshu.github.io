@@ -1,28 +1,18 @@
 +++
-date = "2020-07-23"
-title = "About"
+date = "2020-10-17"
+title = "Hello World!"
 +++
-
-### About this website
-
-The primary purpose of this website is to serve as a [showcase](/showcase) of my accomplishments. But, I also use it as my personal corner on the web. Here, I keep track of my [experiments](/experiments) with code and [inspirations](/inspirations) from across the web.
-
-I built this site using [Hugo](https://gohugo.io/) and modified its [creative portfolio theme](https://themes.gohugo.io/hugo-creative-portfolio-theme/). [Github pages](https://pages.github.com/) host this website for free.
-
-### About me
 
 ![about](/img/about.png)
 
-Hi! I’m Sudhanshu. I build software interfaces and analytics pipelines. I love visual arts and am most expressive with computer-generated art. Considered a graphic design career but had better skills with computers.
+I'm Sudhanshu. I am a Backend Engineer who helps startups build great products so they can create an impact on the market. Currently based out of Bengaluru, India.
 
-I love working with startups and small-mid size companies. With my experience, I helped [Locale.ai](https://www.locale.ai/) bootstrap their geo-spatial data analytics platform. At [CoWrks](https://www.cowrks.com/), I helped power core revenue streams by building software services. Their clients still use the social network I helped build to connect. In my latest project, I give artists control over an AI to generate new realistic images. It uses the [StyleGAN2](https://arxiv.org/abs/1912.04958) neural network under the hood.
+Welcome to my website! Here you will find writeups about projects I work on, things that inspire me, and any other thing that catches my attention.
 
-I am fluent in Python and can work with any library it supports. I have built systems with relational, document, graph, and cache databases. I have routed messages using queues and exchanges, automated repetitive tasks, and used cloud services. The [OAuth 2.0](https://oauth.net/2/) authorization service I created, used an [asynchronous server](https://fastapi.tiangolo.com/). I load tested, documented, and managed logs for it. I have also worked with C, C++, Java, Javascript, R, and [PyTorch](https://pytorch.org/). For creative work, I work with Photoshop, Illustrator, [Processing](https://processing.org/), [p5js](https://p5js.org/) and [openFrameworks](https://openframeworks.cc/).
+I spend most of my days designing software & writing code that runs on servers. Often my work extends to your screen, like this website. I fell in love with computers at a very young age and it grows everyday. For those who live on the cutting edge, I've co-authored a book called '[PyTorch Deep Learning Hands-on](https://www.packtpub.com/product/pytorch-deep-learning-hands-on/9781788834131)' that you can buy from Packt Publishing. I also love generative art & create my own when I have time.
 
-My love for computers began when I encountered my first at age 7. And I loved it for two reasons. One, because I could play games at home. Two, because it didn't make any human errors. The emotional catharsis after [killing Hitler](https://youtu.be/bVU3o8tCE8o?t=797) in Wolfenstein 3D was the result.
+To collaborate, you can reach out to me via email at sudhanshupassi@gmail.com. I reply within a day or two. You can also send me a message on [LinkedIn](https://www.linkedin.com/in/sdhnshu/). Although I use [Twitter](https://twitter.com/Sudhanshupassi) just to follow industry folks, I may get back there soon too.
 
-Outside of computers, my love flows towards nature and its inner workings. I appreciate it by studying its physics, tinkering with everything I get. Recently, I've found love in biological aspects of nature, like genetics and evolution. These things reflect in my thinking process and my creations.
+#### Credits
 
-One of my earliest inspirations is Leonardo Da Vinci. And being a polymath, he inspired a lot of things in me. Thanks to him, I started sketching, keeping a notebook, and [mirror writing](https://en.wikipedia.org/wiki/Mirror_writing#Notable_examples). Also, I started appreciating [mathematics in nature](https://en.wikipedia.org/wiki/Patterns_in_nature) and the workings of the human brain.
-
-You can follow or reach out to me on these social networks, or email me at **sudhanshupassi(at)gmail.com**. You can also support me by buying my book [PyTorch Deep Learning Hands-on](https://www.packtpub.com/big-data-and-business-intelligence/hands-deep-learning-pytorch).
+I built this site using [Hugo](https://gohugo.io/) and modified its [Creative Portfolio](https://themes.gohugo.io/hugo-creative-portfolio-theme/) theme to fit my style. I'm hosting it using [Github Pages](https://pages.github.com/) for free. If you want to use this as a template, feel free to fork it on [Github.](https://github.com/sdhnshu/sdhnshu.github.io)

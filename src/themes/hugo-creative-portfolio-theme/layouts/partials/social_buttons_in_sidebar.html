@@ -1,20 +1,14 @@
 <p class="social">
 
-  {{ with .Site.Params.social.email }}
-  <a href="mailto:{{ . }}" data-animate-hover="pulse" class="email">
-    <i class="fa fa-envelope"></i>
-  </a>
-  {{end}}
-
   {{ with .Site.Params.social.github }}
   <a href="{{ . }}" data-animate-hover="pulse" class="external">
     <i class="fa fa-github"></i>
   </a>
   {{end}}
 
-  {{ with .Site.Params.social.medium }}
-  <a href="{{ . }}" data-animate-hover="pulse" class="external">
-    <i class="fa fa-medium"></i>
+  {{ with .Site.Params.social.email }}
+  <a href="mailto:{{ . }}" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
   </a>
   {{end}}
 
@@ -30,4 +24,9 @@
   </a>
   {{end}}
 
+  {{ with .Site.Params.social.medium }}
+  <a href="{{ . }}" data-animate-hover="pulse" class="external">
+    <i class="fa fa-medium"></i>
+  </a>
+  {{end}}
 </p>
