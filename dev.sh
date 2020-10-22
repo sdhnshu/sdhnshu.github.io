@@ -1,3 +1,3 @@
 #! /bin/sh
 cd src
-hugo server
+hugo server -D
