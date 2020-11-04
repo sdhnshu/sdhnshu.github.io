@@ -5,13 +5,13 @@ title = "Hello World!"
 
 ![about](/img/about.png)
 
-I'm Sudhanshu. I am a Backend Engineer who helps startups build great products so they can create an impact on the market. Currently based out of Bengaluru, India.
+I'm Sudhanshu. I am a Backend Engineer who helps startups build great products so they can create an impact on the market.
 
-Welcome to my website! Here you will find writeups about projects I work on, things that inspire me, and any other thing that catches my attention.
+Welcome to my website! Here you will find writeups about projects I work on, things that inspire me, and any other topic that interests me.
 
-I spend most of my days designing software & writing code that runs on servers. Often my work extends to your screen, like this website. I fell in love with computers at a very young age and it grows everyday. For those who live on the cutting edge, I've co-authored a book called '[PyTorch Deep Learning Hands-on](https://www.packtpub.com/product/pytorch-deep-learning-hands-on/9781788834131)' that you can buy from Packt Publishing. I also love generative art & create my own when I have time.
+I'm currently based out of Bengaluru, India, and spend my days designing software & writing code. I'm also an audiophile by heart and am learning to play the guitar. Recently I fell in love with Generative Art, which brings together my passion for code and visual arts. I've also co-authored a book called ['PyTorch Deep Learning Hands-on.'](https://www.packtpub.com/product/pytorch-deep-learning-hands-on/9781788834131)
 
-To collaborate, you can reach out to me via email at sudhanshupassi@gmail.com. I reply within a day or two. You can also send me a message on [LinkedIn](https://www.linkedin.com/in/sdhnshu/). Although I use [Twitter](https://twitter.com/Sudhanshupassi) just to follow industry folks, I may get back there soon too.
+Do reach out to me if you want to collaborate on any project. I would love to create something exceptional and unique for you. Email is my primary contact `sudhanshupassi@gmail.com`, although you can also reach out to me via [LinkedIn](https://www.linkedin.com/in/sdhnshu/) or [Twitter.](https://twitter.com/Sudhanshupassi)
 
 #### Credits
 

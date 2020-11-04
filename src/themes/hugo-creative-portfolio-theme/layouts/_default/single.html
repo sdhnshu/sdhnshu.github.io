@@ -7,9 +7,22 @@
         <h1>{{ .Title }}</h1>
         <i><p class='timestamp'>Last updated {{ .Date.Format "Jan 2, 2006" }}</p></i>
         {{ .Content }}
-        {{ template "_internal/disqus.html" . }}
+        <!-- {{ template "_internal/disqus.html" . }} -->
+        <!-- <div id="disqus_thread"></div>
+            <script>
+            (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://sudportfolio.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->
       </div>
     </div>
   </div>
 </div>
+
+
+
 {{ end }}

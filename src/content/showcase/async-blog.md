@@ -4,7 +4,7 @@ title = "Asynchronous Python App Architecture"
 showonlyimage = false
 draft = false
 image = "https://miro.medium.com/max/700/0*y_3JGr5VRvkcAcjE.png"
-weight = 2
+weight = 5
 +++
 
 Learn how to choose the correct architecture for your application.
@@ -12,7 +12,7 @@ Learn how to choose the correct architecture for your application.
 
 ![img](https://miro.medium.com/max/700/0*y_3JGr5VRvkcAcjE.png)
 
-Originally published on Medium [(link)](https://medium.com/cowrks/asynchronous-python-app-architecture-5395d5338c4a)
+- Originally published on [Medium](https://medium.com/cowrks/asynchronous-python-app-architecture-5395d5338c4a)
 
 ### Introduction
 Choosing an application architecture greatly depends on the scale you are building it for.
@@ -30,7 +30,7 @@ In this post, we’ll be deep-diving into how to build an asynchronous python ap
 We’ll be using sanic (v0.7) as the api framework and asyncpg (v0.15) to connect to a postgres db. You can use any async db framework you prefer.
 
 ---
-### How we use async at CoWrks?
+### How we use async?
 
 We started using sanic after we had experimented with various other api frameworks like falcon, flask, tornado and twisted. In a few months, python added asyncio to its framework. Libraries started popping up using this async feature. We found this framework when it had around 500 stars on github. And the community grew so fast and at the time of this writing it has shot up to over 10k stars. We started using it on our production servers and have yet to encounter any serious issues.
 
@@ -54,7 +54,7 @@ The central part of async is an event loop. As the name suggests, it is a loop. 
 
 Here’s how you can create an event loop using asyncio:
 
-```
+```python
 loop = asyncio.get_event_loop()
 loop.run_until_complete(tasks())
 ```
@@ -66,7 +66,7 @@ The loop controls what task gets executed when, and does the context switching b
 #### Defining async functions
 
 Here’s the syntax of async function:
-```
+```python
 async def function_name():
     resp = await some_other_async_function()
     return resp
@@ -86,13 +86,13 @@ So an async function can call another async function; it can also call a sync fu
 Sanic is a api framework that uses [uvloop](https://magic.io/blog/uvloop-blazing-fast-python-networking/) as its event loop. Uvloop is what makes sanic blazingly fast. Its around __2x faster than any nodejs__ async server. Almost __5x faster than tornado or twisted__ (python api frameworks) and has half the latency of any other servers (and is obviously around 10x faster than any sync api framework like falcon, flask, django). Uvloop is written in Cython and is built on top of a asynchronous library written in C.
 
 Let’s check out an example:
-```
+```python
 app = sanic.Sanic()app.add_route(root_func, '/', methods=['GET'])
 app.add_route(users_func, '/users/<uid>', methods=['GET'])if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000, workers=2)
 ```
 Here, `root_func`, `users_func` are async functions.
-```
+```python
 async def root_func(request):
     resp = await do_whatever()
     return sanic.response.json({'resp': resp})async def users_func(request, uid):
@@ -109,7 +109,7 @@ To add some more speed to the app, we can increase the number of workers while c
 ### Asyncpg
 
 To use asyncpg or any other async library with sanic, we need to perform one more step. Sanic does not use the default asyncio loop underneath. It uses another loop called uvloop which is a faster version of the asyncio loop. So when we define the asyncpg connection, we need to connect that task to the uvloop which is already running instead of creating another event loop and adding tasks to that. In order to do that you need access to the uvloop object. Here’s how you do it:
-```
+```python
 app = sanic.Sanic()
 
 @app.listener('before_server_start')
@@ -129,46 +129,56 @@ Now this db variable can be used with your project and is adding tasks in the uv
 #### Semaphore
 
 To avoid the async api from overloading due to a Denial Of Service (DOS) attack, you can add a semaphore to limit the number of simultaneous api requests that are computed by doing the following:
-```
+```python
 app = sanic.Sanic()
 
 @app.listener('before_server_start')
 async def before_start(app, uvloop):
-    sem = await asyncio.Semaphore(100, loop=uvloop)app.add_route(root_func, '/', methods=['GET'])
+    sem = await asyncio.Semaphore(100, loop=uvloop)
 
+app.add_route(root_func, '/', methods=['GET'])
 app.add_route(users_func, '/users/<uid>', methods=['GET'])
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000, workers=2)
 
-####################
+-------------------------------------------
 
 async def users_func(request, uid):
     async with sem:
         resp = await do_whatever()
-        return sanic.response.json({'resp': resp})async def root_func(request):
+        return sanic.response.json({'resp': resp})
+
+async def root_func(request):
     async with sem:
         resp = await do_whatever()
         return sanic.response.json({'resp': resp})
 ```
 Here I’ve set a semaphore for 100 and attached it to the uvloop. And every api function will be called only when the semaphore lock is open.
-Async classes
+
+#### Async classes
 
 Classes with async functions are defined as:
-
-class Class_name:def __init__(self):
-        passasync def func1(self):
+```python
+class Class_name:
+    def __init__(self):
         pass
-
+    async def func1(self):
+        pass
     async def func2(self):
         pass
+```
 
 They are initialized normally but the functions will be awaited because they are async.
 
+```python
 c = Class_name()
 resp = await c.func1()
 resp = await c.func2()
+```
 
-Conclusion
+-------
 
-Asynchronous application architecture is fairly easy to understand and is used widely in all languages especially large scaling apps. It is also a useful tool to have in your arsenal if you are looking towards upgrading your coding game. If you want to showcase your abilities and have a drive to learn, we at CoWrks are looking for you. You can apply at https://careers.cowrks.com/
+### Conclusion
+
+Asynchronous application architecture is fairly easy to understand and is used widely in all languages especially large scaling apps. It is also a useful tool to have in your arsenal if you are looking towards upgrading your coding game.
